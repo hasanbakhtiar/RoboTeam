@@ -1,0 +1,33 @@
+h1{
+    color: blue;
+    font-style: italic;
+    font-weight: bolder;
+    background-color: black;
+    text-decoration: underline;
+}
+
+p:nth-child(1){
+    color: green;
+    letter-spacing: 5px;
+}
+p:nth-child(2){
+    background-color: brown;
+    color: white;
+    line-height: 50px;
+    word-spacing: 20px;
+}
+p:nth-child(3){
+    font-family:  sans-serif;
+    text-align: justify;
+
+
+}
+
+li{
+    text-transform: uppercase;
+    list-style: square;
+}
+li:nth-child(3n-2){
+    color: red;
+    
+}

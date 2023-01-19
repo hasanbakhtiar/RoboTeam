@@ -11,30 +11,62 @@
 
 
 
-    <h1>Register Page</h1>
-    <form>
-      <label for="name">name:</label>
-      <input type="text" id="name" />
-      <label for="surname">surname:</label>
-      <input type="text" id="surname" />
-      <br /><br />
-      <label for="phone">phone number:</label>
-      <input type="tel" id="phone" />
-      <label for="email">Email:</label>
-      <input type="email" id="email" />
-      <br /><br />
-      <label for="gender">Gender</label>
-      <br>
-      <label for="male">male</label>
-      <input type="radio" id="male" name="gender">
-      <label for="female">female</label>
-      <input type="radio" id="female" name="gender">
-      <br><br>
-      <label for="birthday">Birthday</label>
-      <input type="date">
-      <br><br>
-      <input type="submit" />
-    </form>
+    <fieldset>
+      <legend>Register form</legend>
+      <form>
+        <label for="name">name:</label>
+        <input type="text" id="name" />
+        <label for="surname">surname:</label>
+        <input type="text" id="surname" />
+        <br /><br />
+        <label for="phone">phone number:</label>
+        <input type="tel" id="phone"  value="+994" maxlength="13"/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required/>
+        <br /><br />
+        <label for="gender">Gender</label>
+        <br>
+        <label for="male">male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="female">female</label>
+        <input type="radio" id="female" name="gender">
+        <br><br>
+        <label for="birthday">Birthday</label>
+        <input type="date">
+        <br><br>
+        <!-- <input type="button" value="send1"/>
+        <input type="submit" value="send2"/>
+        <button type="button"><h1>send</h1></button>
+        <button type="submit">send4</button>
+        <input type="reset">
+        <button type="reset">reset</button> -->
+        <!-- <input type="image" src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg"> -->
+        <label for="pass">Password </label>
+        <input type="password" minlength="8">
+        <br><br>
+        <label for="city">City:</label>
+        <select>
+         <optgroup label="cenub">
+          <option value="Lenkeran">Lenkeran</option>
+          <option value="Astara">Astara</option>
+         </optgroup>
+         <optgroup label="baki etrafi">
+          <option value="Baku">Baku</option>
+          <option value="Sumgayit" >Sumgayit</option>
+          <option value="Qebele">Qebele</option>
+         </optgroup>
+        </select>
+        <br><br>
+        <label for="bio">Bio:</label>
+        <textarea  cols="30" rows="5" placeholder="enter bio"></textarea>
+        <br><br>
+        
+        
+          <button>Send</button>
+  
+  
+      </form>
+    </fieldset>
 
 
 

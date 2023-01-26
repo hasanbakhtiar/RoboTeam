@@ -9,8 +9,9 @@ header * {
   font-family: sans-serif;
 }
 
-header .logo {
+header .logo h1{
   color: brown;
+  margin-left: 200px;
 }
 
 header nav {

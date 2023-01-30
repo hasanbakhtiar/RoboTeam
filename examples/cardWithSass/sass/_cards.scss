@@ -1,0 +1,15 @@
+.wrapper{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    @include center();
+    .card-con{
+        width: 80%;
+        height: auto;
+        @include between();
+        .card{
+            width: 31%;
+            border: 1px solid #000;
+        }
+    }
+}

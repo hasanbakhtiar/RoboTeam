@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  width: 50%;
+  height: 100px;
+  border: 2px dashed #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .left, .container .right {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .left .box, .container .right .box {
+  width: 48%;
+  height: 90px;
+  background-color: red;
+}
+.container .left #special {
+  position: absolute;
+  background-color: green;
+  width: 25%;
+  height: 100px;
+  left: 110px;
+  top: 30px;
+}/*# sourceMappingURL=style.css.map */

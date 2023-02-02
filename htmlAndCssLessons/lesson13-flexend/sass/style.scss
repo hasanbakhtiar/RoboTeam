@@ -1,0 +1,40 @@
+.container{
+    width: 100%;
+    height: 70vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    // align-content: space-evenly;
+    align-items: flex-end;
+    column-gap: 100px;
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        font-size: 100px;
+        color: #fff;
+        &:nth-child(1){
+           
+            flex-shrink: 1;
+        }
+
+        &:nth-child(2){
+            align-self: flex-start;
+            flex-grow: 1;
+        }
+
+        &:nth-child(3){
+            flex-grow: 4;
+        }
+
+        &:nth-child(4){
+           
+            flex-grow: 1;
+        }
+
+        &:nth-child(5){
+            flex-grow: 1;
+        }
+    }
+}

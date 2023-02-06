@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+// .box{
+//     width: 100px;
+//     height: 100px;
+//     background-color: red;
+    // transform: translateY(100px);
+    // transform: translateX(100px);
+    // transform: translate(100px,200px);
+    // transform: scaleX(3);
+    // transform: scaleY(3);
+    // transform: scale(3,2);
+    // transform: skewX(20deg);
+    // transform: skewY(20deg);
+    // transform: skew(20deg,100deg);
+    // transform: rotate(120deg);
+    // matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+    // transform: matrix(2, 10, 0, 1, 100, 0);
+//    transition: 1s;
+//    &:hover{
+//     transform: rotateY(65deg);
+//    }
+    
+// }
+
+// #my-icon{
+//     color: red;
+//     font-size: 100px;
+//     transform: skew(20deg);
+// }
+// input:focus-visible{
+//     outline: none;
+//     // border: none;
+// }
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    // transition-duration: 2s;
+    // transition-property:  background-color, transform;
+    // transition-delay: 2s;
+    // transition:background-color 1000ms,transform 10s;
+    // &:hover{
+    //     background-color: green;
+    //     transform: scale(2);
+    // }
+}

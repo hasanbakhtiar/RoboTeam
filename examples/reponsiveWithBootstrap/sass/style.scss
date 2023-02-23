@@ -1,0 +1,40 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+$primarycolor:#ff0000;
+
+
+.primarycolor-text{
+    color: $primarycolor;
+}
+
+
+.btn-primary{
+    background-color: $primarycolor;
+    border-color:$primarycolor ;
+    &:hover{
+    background-color: $primarycolor;
+        
+    }
+}
+
+.hero{
+    background-image: url('http://st.ourhtmldemo.com/template/cargohub/images/main-slider/slide3.jpg');
+}
+
+.ch-line{
+    background-color: $primarycolor;
+    width: 100px;
+    height: 2px;
+}
+
+.oss{
+    background-color: #0c1239;
+    .oss-text{
+        border-left: 3px solid $primarycolor;
+    }
+  
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}

@@ -45,3 +45,16 @@
 // name
 // surname
 // age
+
+
+
+var userInfo = {
+    name:"Arthur",
+    surname:"Morgan",
+    age:40
+}
+// console.log(userInfo.name);
+// console.log(userInfo.surname);
+// console.log(userInfo.age);
+
+// console.log(userInfo.name + userInfo.surname + (userInfo.age + 5) );

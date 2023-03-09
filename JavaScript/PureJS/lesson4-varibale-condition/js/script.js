@@ -166,3 +166,72 @@ const productFive = ['more meat','cola','bread','egg','milk'] // 70$ - 100$
 
 
 // if else hemde switch case
+
+
+// const time = 7;
+// const hourMoney = 1;
+// const totalMoney = time*hourMoney;
+
+// console.log("Employee salary:" + totalMoney+"$");
+
+// if (totalMoney>0 && totalMoney<=10) {
+//     console.log(productOne);
+//     switch (totalMoney) {
+//         case 7:
+          
+//             console.log('bread','egg');
+//             break;
+    
+//         default:
+//             break;
+//     }
+// }else if(totalMoney>10 && totalMoney<20){
+//     console.log(productTwo);
+
+// }else if(totalMoney>20 && totalMoney<=40){
+//     console.log(productThree);
+
+// }else if(totalMoney>40 && totalMoney<=70){
+//     console.log(productFour);
+
+// }else if(totalMoney>70 && totalMoney<=100){
+//     console.log(productFive);
+
+// }else{
+//     console.log('no money');
+// }
+
+
+
+// const a = 6;
+// const b = 10;
+// const c = 2;
+// const d = 30;
+
+// if (a>4 && a<=10) {
+//     switch (a) {
+//         case 5:
+//             if (b<20) {
+//                 console.log("true1");
+//             }else{
+//     console.log('wrong');
+
+//             }
+//             break;
+//         case 6:
+//             if (c>10) {
+//                 console.log("true2");
+//             }else{
+//     console.log('wrong');
+
+//             }
+//             break;
+//         default:
+//             break;
+//     }
+    
+// }else if (b>10 && a<=20) {
+    
+// }else{
+//     console.log('wrong');
+// }

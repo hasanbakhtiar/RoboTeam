@@ -59,3 +59,22 @@
 
 
 
+const li = document.querySelectorAll('li');
+const btn = document.querySelector('button');
+
+
+const info =()=>{
+    if (btn.innerHTML === 'birthyear') {
+        li[0].innerHTML = 'birthyear';
+        li[1].innerHTML = 'city'
+        btn.innerHTML = 'name';
+    }else{
+        li[0].innerHTML = 'name';
+        li[1].innerHTML = 'surname'
+        btn.innerHTML = 'birthyear';
+
+    }
+}
+
+btn.onclick = info;
+

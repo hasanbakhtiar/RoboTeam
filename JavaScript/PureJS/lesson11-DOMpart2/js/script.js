@@ -68,5 +68,12 @@ document.querySelector('h1').style.backgroundColor = 'green';
 
 
 
+const info = {
+    az:['az','soyad','olke'],
+    en:['name','surname','country']
+};
+
+
+
 
 

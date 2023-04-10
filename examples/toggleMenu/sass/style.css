@@ -8,6 +8,10 @@ html {
   background-color: bisque;
   transition: 1s;
 }
+.mymenu ul {
+  transform: translateY(0px);
+  transition: 1s;
+}
 .mymenu ul li {
   list-style: none;
   font-weight: bolder;
@@ -15,7 +19,11 @@ html {
 }
 
 #hide {
-  transform: translate(600px);
+  height: 0;
+}
+#hide ul {
+  opacity: 0;
+  transform: translateY(-300px);
 }
 
 section {

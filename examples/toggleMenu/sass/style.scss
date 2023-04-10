@@ -7,23 +7,27 @@ html{
     height: 40vh;
     background-color: bisque;
     ul{
+        transform: translateY(0px);
         li{
             list-style: none;
             font-weight: bolder;
             font-size: 40px;
         }
+    transition: 1s;
+
     }
     transition: 1s;
 }
 
 #hide{
-    transform: translate(600px);
+    height: 0;
+    ul{
+        opacity: 0;
+        transform: translateY(-300px);
+    }
 }
 
 
-nav{
-
-}
 
 
 

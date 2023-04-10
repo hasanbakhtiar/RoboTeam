@@ -1,0 +1,64 @@
+html{
+    overflow-x: hidden;
+}
+
+.mymenu{
+    width: 30%;
+    height: 40vh;
+    background-color: bisque;
+    ul{
+        li{
+            list-style: none;
+            font-weight: bolder;
+            font-size: 40px;
+        }
+    }
+    transition: 1s;
+}
+
+#hide{
+    transform: translate(600px);
+}
+
+
+nav{
+
+}
+
+
+
+section{
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid green;
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 30px;
+    }
+}
+
+.light{
+    section{
+        background-color: bisque;
+        // filter: invert(100%);
+        h1,p{
+            color: cadetblue;
+        }
+    }
+}
+
+.dark{
+    section{
+        background-color: black;
+        // filter: invert(100%);
+        h1,p{
+            color: #fff;
+        }
+    }
+}

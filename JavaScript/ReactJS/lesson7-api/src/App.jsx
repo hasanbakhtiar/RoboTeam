@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react'
 
 
@@ -8,11 +9,15 @@ class App extends Component {
       products: []
     }
   }
-  
+
   componentDidMount(){
-    fetch('https://fakestoreapi.com/products')
-    .then(res=>res.json())
-    .then(data=>this.setState({products:data}))
+    axios.get("https://fakestoreapi.com/products")
+    .then(res=>this.setState({products:res.data}))
+    
+    
+    // fetch('https://fakestoreapi.com/products')
+    // .then(res=>res.json())
+    // .then(data=>this.setState({products:data}))
   }
  
     

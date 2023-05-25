@@ -11,7 +11,8 @@ class Search extends Component {
 
     searchSubmit=(e)=>{
         e.preventDefault();
-        this.props.searchData(this.state.keyword)
+        this.props.searchData(this.state.keyword);
+        this.setState({keyword:''})
     }
     
     
@@ -21,7 +22,7 @@ class Search extends Component {
                 <div className="d-flex justify-content-center my-5">
                     <div className="col-6">
                         <div className="input-group mb-3">
-                            <input onChange={e=>this.setState({keyword:e.target.value})} type="text" className="form-control" placeholder="Enter username" />
+                            <input value={this.state.keyword} onChange={e=>this.setState({keyword:e.target.value})} type="text" className="form-control" placeholder="Enter username" />
                             <button className="btn btn-dark" type="button" id="button-addon2">Search</button>
                         </div>
                     </div>

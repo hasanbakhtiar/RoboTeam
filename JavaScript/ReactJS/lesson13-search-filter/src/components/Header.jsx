@@ -3,11 +3,16 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { ProductContext } from '../context/productContext'
 
+
 const Header = () => {
   const [productdata] = useContext(ProductContext);
-  const [query,setQuery] = useState("");
+  const [query,setQuery] = useState(null);
+  const [searchvalue,setSearchvalue] = useState(null);
 
-  
+const searchSubmited=(e)=>{
+        e.preventDefault();
+        setSearchvalue(query);
+}
   
   return (
     <div>
@@ -41,13 +46,15 @@ const Header = () => {
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                   </div>
                   <div className="modal-body">
-                    <div className="input-group mb-3">
+                   <form onSubmit={searchSubmited}>
+                   <div className="input-group mb-3">
                       <input onChange={e=>setQuery(e.target.value)} type="text" className="form-control" placeholder="Enter product" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                      <button className="btn btn-outline-success" type="button" id="button-addon2">Search</button>
+                      <button className="btn btn-outline-success" type="submit" id="button-addon2">Search</button>
                     </div>
+                   </form>
                     <ul className="list-group">
-                      {productdata.filter(value=>value.title.toLocaleLowerCase().includes(query)).map(i=>(
-                        <li key={i.id} className="list-group-item">{i.title}</li>
+                      {query === null ?null:productdata.filter(value=>value.title.toLocaleLowerCase().includes(searchvalue)).map(i=>(
+                        <a href={`/product/${i.id}`} key={i.id} className="list-group-item">{i.title}</a>
 
                       ))}
       

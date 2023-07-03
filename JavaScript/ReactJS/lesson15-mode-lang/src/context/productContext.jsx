@@ -1,10 +1,12 @@
 import axios from "axios";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { LangContext } from "./langContext";
 
 export const ProductContext = createContext();
 
 export const ProductProvider=(props)=>{
     const [product,setProduct] = useState([]);
+    const [lang] = useContext(LangContext);
     
     useEffect(()=>{
         axios.get("https://dummyjson.com/products")

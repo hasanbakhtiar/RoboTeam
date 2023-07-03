@@ -5,13 +5,15 @@ import { ProductContext } from '../context/productContext'
 import { Link } from 'react-router-dom'
 import { useCart } from 'react-use-cart'
 import { ModeContext } from '../context/modeContext'
+import { LangContext } from '../context/langContext'
 
 
 const Header = () => {
   const [productdata] = useContext(ProductContext);
   const [query, setQuery] = useState(null);
   const [searchvalue, setSearchvalue] = useState(null);
-  const [mode,setMode] = useContext(ModeContext);
+  const [mode, setMode] = useContext(ModeContext);
+  const [lang, setLang] = useContext(LangContext);
   const { totalItems } = useCart();
 
   const searchSubmited = (e) => {
@@ -72,7 +74,8 @@ const Header = () => {
               </div>
             </div>
 
-            <Button variant="warning ms-3" onClick={()=>{mode==='light'? setMode('dark'):setMode('light')}}>{mode==='light'?<i className="fa-solid fa-moon"></i>:<i className="fa-solid fa-sun"></i>}</Button>
+            <Button variant="warning ms-3" onClick={() => { mode === 'light' ? setMode('dark') : setMode('light') }}>{mode === 'light' ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>}</Button>
+            <Button variant="warning ms-3" onClick={() => { lang === 'en' ? setLang('az') : setLang('en') }}>{lang === 'en' ?  <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Azerbaijan_Democtratic_Republic.PNG/800px-Flag_of_Azerbaijan_Democtratic_Republic.PNG' width={50} alt='err'/> : <img width={50} alt='err' src='https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png'/>}</Button>
 
           </Navbar.Collapse>
         </Container>

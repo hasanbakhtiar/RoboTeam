@@ -10,29 +10,30 @@ import ProductDetails from './pages/ProductDetails'
 import { CartProvider } from 'react-use-cart'
 import Basket from './pages/Basket'
 import Footer from './components/Footer'
-import {  ModeContext, ModeProvider } from './context/modeContext'
+import { ModeContext, ModeProvider } from './context/modeContext'
+import { LangProvider } from './context/langContext'
 
-const Main = ()=>{
+const Main = () => {
   const [mode] = useContext(ModeContext);
 
-  return(
+  return (
     <div className={mode}>
-    <CartProvider>
-      <ProductProvider>
-        <Header />
-        <Container>
-          <Routes>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/about' element={<About />}></Route>
-            <Route path='/product' element={<Product />}></Route>
-            <Route path='/basket' element={<Basket />}></Route>
-            <Route path='/product/:url' element={<ProductDetails />}></Route>
-            <Route path='*' element={<Home />}></Route>
-          </Routes>
-        </Container>
-        <Footer />
-      </ProductProvider>
-    </CartProvider>
+      <CartProvider>
+        <ProductProvider>
+          <Header />
+          <Container>
+            <Routes>
+              <Route path='/' element={<Home />}></Route>
+              <Route path='/about' element={<About />}></Route>
+              <Route path='/product' element={<Product />}></Route>
+              <Route path='/basket' element={<Basket />}></Route>
+              <Route path='/product/:url' element={<ProductDetails />}></Route>
+              <Route path='*' element={<Home />}></Route>
+            </Routes>
+          </Container>
+          <Footer />
+        </ProductProvider>
+      </CartProvider>
     </div>
   )
 }
@@ -41,9 +42,11 @@ const Main = ()=>{
 const App = () => {
   return (
     <BrowserRouter>
-    <ModeProvider>
-     <Main />
-    </ModeProvider>
+    <LangProvider>
+      <ModeProvider>
+        <Main />
+      </ModeProvider>
+      </LangProvider>
     </BrowserRouter>
   )
 }

@@ -8,8 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {  Card, Col } from 'react-bootstrap';
 import AOS from 'aos';
 import { ProductContext } from '../context/productContext';
+import { LangContext } from '../context/langContext';
 const Home = () => {
-
+const [lang] = useContext(LangContext)
 useEffect(()=>{
   AOS.init();
 },[])
@@ -20,7 +21,7 @@ useEffect(()=>{
   return (
     <Fragment>
       <div className="px-4 py-5 my-5 text-center">
-        <h1 className="display-5 fw-bold text-body-emphasis">Best-Shop</h1>
+        <h1 className="display-5 fw-bold text-body-emphasis">{lang === 'en'?"Best-Shop":"Ela ticaret sayti"}</h1>
         <div className="col-lg-6 mx-auto">
           <p className="lead mb-4">You can find any type of products.According to this advantage we are the best shop </p>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">

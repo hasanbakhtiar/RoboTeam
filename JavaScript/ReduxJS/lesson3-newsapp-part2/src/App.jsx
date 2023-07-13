@@ -7,6 +7,7 @@ import { Container } from "react-bootstrap";
 import NewsDetails from "./pages/client/NewsDetails";
 import Dashbaord from "./pages/admin/Dashbaord";
 import AddNews from "./pages/admin/update/AddNews";
+import EditNews from "./pages/admin/update/EditNews";
 const App = () => {
     return (
         <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path="/:url" element={<NewsDetails />}></Route>
                     <Route path="/admin" element={<Dashbaord />}></Route>
                     <Route path="/admin/add" element={<AddNews />}></Route>
+                    <Route path="/admin/edit/:ne" element={<EditNews />}></Route>
                     <Route path="*" element={<NotFoundPage />}></Route>
                 </Routes>
             </Container>

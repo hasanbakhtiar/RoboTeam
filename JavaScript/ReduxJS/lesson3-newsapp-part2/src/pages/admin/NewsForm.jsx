@@ -3,10 +3,12 @@ import { FloatingLabel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function NewsForm({sendValue}) {
-    const [photo,setPhoto] = useState('');
-    const [title,setTitle] = useState('');
-    const [desc,setDesc] = useState('');
+// eslint-disable-next-line react/prop-types
+function NewsForm({sendValue,editnews}) {
+    // eslint-disable-next-line react/prop-types
+    const [photo,setPhoto] = useState(editnews?editnews.photo:'');
+    const [title,setTitle] = useState(editnews?editnews.title:'');
+    const [desc,setDesc] = useState(editnews?editnews.desc:'');
 
     
     const newsSubmited =event=>{
@@ -22,12 +24,12 @@ function NewsForm({sendValue}) {
          
             <Form.Group className="mb-3" >
                 <Form.Label>Photo</Form.Label>
-                <Form.Control onChange={e=>{setPhoto(e.target.value)}} type="text" placeholder="Enter photo url" />
+                <Form.Control value={photo} onChange={e=>{setPhoto(e.target.value)}} type="text" placeholder="Enter photo url" />
 
             </Form.Group>
             <Form.Group className="mb-3" >
                 <Form.Label>Title</Form.Label>
-                <Form.Control onChange={e=>{setTitle(e.target.value)}} type="text" placeholder="Enter title" />
+                <Form.Control value={title} onChange={e=>{setTitle(e.target.value)}} type="text" placeholder="Enter title" />
 
             </Form.Group>
 
@@ -35,7 +37,8 @@ function NewsForm({sendValue}) {
                 <Form.Control
                     as="textarea"
                     onChange={e=>{setDesc(e.target.value)}}
-                    style={{ height: '100px', "margin-bottom": "20px" }}
+                    style={{ height: '100px', "marginBottom": "20px" }}
+                    value={desc}
                 />
             </FloatingLabel>
             <Button variant="primary" type="submit">

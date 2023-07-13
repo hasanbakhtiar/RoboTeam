@@ -7,7 +7,9 @@ import Form from 'react-bootstrap/Form';
 function NewsForm({sendValue,editnews}) {
     // eslint-disable-next-line react/prop-types
     const [photo,setPhoto] = useState(editnews?editnews.photo:'');
+    // eslint-disable-next-line react/prop-types
     const [title,setTitle] = useState(editnews?editnews.title:'');
+    // eslint-disable-next-line react/prop-types
     const [desc,setDesc] = useState(editnews?editnews.desc:'');
 
     

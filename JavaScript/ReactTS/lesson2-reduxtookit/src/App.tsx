@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Col, Form, InputGroup, ListGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { add } from "./feature/todoSlice";
+import { add, remove } from "./feature/todoSlice";
 
 const App: React.FC = () => {
     const tododata:any = useSelector((p:any)=>p.todos);
@@ -31,10 +31,11 @@ const App: React.FC = () => {
       <ListGroup>
         {tododata.map((item:any)=>(
 
-      <ListGroup.Item className="myanimation d-flex justify-content-between align-items-center" key={item.id}>{item.title} <Button className="btn btn-danger">X</Button></ListGroup.Item>
+      <ListGroup.Item className="myanimation d-flex justify-content-between align-items-center" key={item.id}>{item.title} <Button className="btn btn-danger" onClick={()=>{dispatch(remove(item.id))}}>X</Button></ListGroup.Item>
         ))}
      
     </ListGroup>
+    <Button variant="btn btn-dark mt-2">Clear All</Button>
      </Col>
     </div>
   );
